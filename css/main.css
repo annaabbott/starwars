@@ -123,3 +123,7 @@ footer {
     width: 33%;
     display: inline-block;
 }
+
+div.film-info h3 {
+    color: blue;
+}

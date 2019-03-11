@@ -24,6 +24,11 @@ function makeFilmInfo(film) {
     resultDiv.appendChild(makeTitle(film));
     resultDiv.appendChild(makeInfoSection("Info:"));
     resultDiv.appendChild(makeInfoList(film));
+    resultDiv.appendChild(makeInfoSection('Opening Crawl:'));
+    resultDiv.appendChild(makeOpeningCrawl(film));
+    resultDiv.appendChild(makeInfoSection('Characters:'));
+    resultDiv.appendChild(makeCharacterList(film));
+
     return resultDiv;
 }
 
@@ -52,11 +57,11 @@ function makeInfoList(film) {
     return ul;
 }
 
-function makeInfoListItem(key, value) {
+function makeInfoListItem(label, value) {
     const li = document.createElement('li');
 
     const strong = document.createElement('strong');
-    strong.innerText = key + ": ";
+    strong.innerText = label + ": ";
     li.appendChild(strong);
     
     li.appendChild(document.createTextNode(value));
@@ -64,9 +69,34 @@ function makeInfoListItem(key, value) {
     return li;
 }
 
+function makeOpeningCrawl(film) {
+    const blockquote = document.createElement('blockquote');
+    blockquote.innerText = film.opening_crawl;
 
+    return blockquote;
+}
 
+function makeCharacterList(film) {
+    const ul = document.createElement('ul');
 
+    for (let i=0; i < film.characters.length && i < 12; i++) {
+        ul.appendChild(makeCharacterListItem(film.characters[i]));
+    }
+
+    return ul;
+}
+
+function makeCharacterListItem(url) {
+    const person = people.find(item => item.url === url);
+    if (!person) {
+        return;
+    }
+
+    const li = document.createElement('li');
+    li.innerText = person.name;
+
+    return li;
+}
 
 
 
