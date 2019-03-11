@@ -10,6 +10,7 @@ for (let film of films) {
     html += `<h2> ${film.title}</h2>`;
 }
 
+//This is a comment
 document.getElementById("films").innerHTML = html;
 
 
