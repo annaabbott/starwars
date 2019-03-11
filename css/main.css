@@ -115,3 +115,11 @@ footer {
       }
 
       /* TESTING GIT*/
+
+.film-info {
+    border: solid;
+    border-width: 1;
+    padding: 15px;
+    width: 33%;
+    display: inline-block;
+}
