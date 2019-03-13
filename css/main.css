@@ -102,6 +102,30 @@ figure.work {
         text-align: center;
       }
 
+.starWars {
+    background-color: #e0ebe8;
+}
+
+.starWars h1 {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.starWars p#subheading {
+    text-align: center;
+}
+      .film-info {
+        border: none;
+        border-width: 1;
+        padding: 15px;
+        width: 33%;
+        display: inline-block;
+    }
+    
+    div.film-info h3 {
+        color: #008080;
+    }      
+
 /*FOOTER*/
 
 footer {
@@ -116,14 +140,3 @@ footer {
 
       /* TESTING GIT*/
 
-.film-info {
-    border: solid;
-    border-width: 1;
-    padding: 15px;
-    width: 33%;
-    display: inline-block;
-}
-
-div.film-info h3 {
-    color: blue;
-}
