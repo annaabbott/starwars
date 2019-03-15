@@ -26,7 +26,7 @@ function makeFilmInfo(film) {
     resultDiv.appendChild(makeInfoList(film));
     resultDiv.appendChild(makeInfoSection('Opening Crawl:'));
     resultDiv.appendChild(makeOpeningCrawl(film));
-    resultDiv.appendChild(makeInfoSection('Characters:'));
+    resultDiv.appendChild(makeInfoSection('Main Characters:'));
     resultDiv.appendChild(makeCharacterList(film));
 
     return resultDiv;
